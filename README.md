@@ -1,7 +1,8 @@
 # Lab Practical Code
 
-Executable code for the lab practicals. Blockchain (BT) practicals are not
-included — the BT Lab Manual contains no code.
+Executable code for the lab practicals. The BT (Blockchain) assignment
+provided here is the only Solidity practical in the BT Lab Manual; it is
+written to complete the manual's walk-through code, not executed or verified.
 
 ## ML (code verified against `ML_output1.pdf` printout; `output_combined.pdf` used as cross-check)
 
@@ -98,8 +99,24 @@ kaggle datasets download -d yasserh/uber-fares-dataset --unzip
 Or download the ZIP from the dataset page on kaggle.com in a browser and unzip
 it (CSV keeps the names above).
 
-`diabetes.csv` is the Pima Indians dataset, not a Kaggle file. To rebuild it
-(use `/content/diabetes.csv` naming so the practical finds it):
+`diabetes.csv` is the same Pima Indians Diabetes dataset distributed in two
+places: the link printed in the ML Lab Manual, Kaggle `abdallahmahgoub/diabetes`
+(which is the practical's dataset), and the identical 768-row file on GitHub,
+`jbrownlee/Datasets pima-indians-diabetes.data.csv`, only without a header row.
+Both give exactly the same 768 x 9 file and the same results; use either.
+
+To fetch the Kaggle one (preferred, matches the manual):
+
+```python
+import kagglehub
+
+path = kagglehub.dataset_download("abdallahmahgoub/diabetes")
+print(path)
+# -> .../abdallahmahgoub/diabetes/versions/1/diabetes.csv
+```
+
+To rebuild it from GitHub without a Kaggle account (use `/content/diabetes.csv`
+naming so the practical finds it):
 
 ```python
 import urllib.request
@@ -122,6 +139,19 @@ print(pd.read_csv("uber.csv").shape)
 
 Note: `sales_data_sample.csv` is not valid UTF-8 — the practical already
 reads it with `encoding="ISO-8859-1"`; leave that as-is.
+
+## Blockchain (from `BT Lab Manual.pdf`)
+
+| File | Assignment | Notes |
+|---|---|---|
+| `Blockchain/assignment_15_bank_smart_contract.sol` | 15 — Smart contract on a test network: deposit / withdraw / show balance for a bank customer account | Written by hand to complete the manual's Solidity walk-through (it prints the `Bank` contract in fragments but never a single compilable file with all three operations; "Show balance" was missing entirely). Not executed or verified — written as a code deliverable only. Matches the manual's fragments (`pragma solidity ^0.4.19`, same function shapes) plus the missing `getBalance()` view function. |
+
+Other BT assignments: 13 (MetaMask installation) and 14 (MetaMask wallet
+creation) require no code; 16 is a survey report; 17 (Hyperledger Composer
+business network) contains CTO/JavaScript/ACL code, all of which is printed
+in the manual, so nothing needed to be written — it was not extracted into
+this folder. No Solidity exists anywhere in the BT manual outside
+Assignment 15.
 
 ## DAA (from `DAA Lab Manual.pdf`)
 
