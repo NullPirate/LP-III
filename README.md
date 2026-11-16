@@ -10,11 +10,11 @@ Jupyter notebook (`.ipynb`) for Google Colab.
 
 | Practical | .py / .ipynb | Dataset needed | Verified result vs PDF printout |
 |---|---|---|---|
-| 1 — Uber Fare Prediction (LR + RF) | `ML/prac_1_uber_fare.py` / `.ipynb` | `uber.csv` | shape (178573, 11) and LR metrics exact; RF metrics match to 4 decimals (library version drift) |
-| 2 — Email spam (KNN + SVM) | `ML/prac_2_email_spam.py` / `.ipynb` | `emails.csv` | exact match (KNN 0.8715 / SVM 0.9671) |
-| 3 — Churn (ANN, Keras) | `ML/prac_3_churn_ann.py` / `.ipynb` | `Churn_Modelling.csv` | runs end-to-end, accuracy ≈ 0.86 (no seed in the practical, so exact numbers vary run to run) |
-| 4 — Diabetes (KNN) | `ML/prac_4_diabetes_knn.py` / `.ipynb` | `diabetes.csv` | exact match (CM [[80 20],[26 28]], acc 0.7013) |
-| 5 — K-Means + Hierarchical | `ML/prac_5_sales_clustering.py` / `.ipynb` | `sales_data_sample.csv` | exact match (KMeans 2/0/1 = 996/975/852; Hier. 0/1/2 = 1204/934/685) |
+| 1 — Uber Fare Prediction (LR + RF) | `ML/prac_1_uber_fare.py` / `.ipynb` | `yasserh/uber-fares-dataset/uber.csv` | shape (178573, 11) and LR metrics exact; RF metrics match to 4 decimals (library version drift) |
+| 2 — Email spam (KNN + SVM) | `ML/prac_2_email_spam.py` / `.ipynb` | `ashutoshkun/emailscsv/emails.csv` | exact match (KNN 0.8715 / SVM 0.9671) |
+| 3 — Churn (ANN, Keras) | `ML/prac_3_churn_ann.py` / `.ipynb` | `shantanudhakadd/bank-customer-churn-prediction/Churn_Modelling.csv` | runs end-to-end, accuracy ≈ 0.86 (no seed in the practical, so exact numbers vary run to run) |
+| 4 — Diabetes (KNN) | `ML/prac_4_diabetes_knn.py` / `.ipynb` | `abdallahmahgoub/diabetes/diabetes.csv` | exact match (CM [[80 20],[26 28]], acc 0.7013) |
+| 5 — K-Means + Hierarchical | `ML/prac_5_sales_clustering.py` / `.ipynb` | `kyanyoga/sample-sales-data/sales_data_sample.csv` | exact match (KMeans 2/0/1 = 996/975/852; Hier. 0/1/2 = 1204/934/685) |
 
 ## How the code accesses the CSV files (read before running on another machine)
 
